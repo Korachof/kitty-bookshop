@@ -4,7 +4,6 @@ import distributor
 import questboard
 
 
-
 class User:
     def __init__(self, name: str, level: int, experience: int, bookshop: object, adopted_cats: list, money: int, distributor: object, customers: list, quest_board: object):
         self._name = name
@@ -16,6 +15,7 @@ class User:
         self._distributor = distributor
         self._customers = customers
         self._questboard = quest_board
+        self.set_level()
 
     def get_name(self):
         """returns User name (STR)"""
@@ -32,7 +32,6 @@ class User:
     
     def set_level(self):
         """sets User level (INT)"""
-        # I need to come up with a basic leveling system using exp first
         # tentative Level Structure (IN PROGRESS)
         # Level 1: 0-99
         # Level 2: 100-199
@@ -44,6 +43,10 @@ class User:
         # Level 8: 700-799
         # Level 9: 800-899
         # Level 10: 900-999
+        if self._experience < 100:
+            self._level = 1
+        else:
+            self._level = self._experience // 100
 
     def get_experience(self):
         """returns User experience (INT)"""
@@ -54,6 +57,7 @@ class User:
         parameter: amount (INT)
         returns: self._experience"""
         self._experience += amount
+        self.set_level()
         return self._experience
     
     def get_bookshop(self):
