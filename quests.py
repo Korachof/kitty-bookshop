@@ -25,4 +25,6 @@ class Quest:
     def get_description(self):
         """returns the Quest description (STR)"""
         return self._description
+    
+
 

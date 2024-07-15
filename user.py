@@ -36,13 +36,7 @@ class User:
         # Level 1: 0-99
         # Level 2: 100-199
         # Level 3: 200-299
-        # Level 4: 300-399
-        # Level 5: 400-499
-        # Level 6: 500-599
-        # Level 7: 600-699
-        # Level 8: 700-799
-        # Level 9: 800-899
-        # Level 10: 900-999
+        # etc
         if self._experience < 100:
             self._level = 1
         else:
