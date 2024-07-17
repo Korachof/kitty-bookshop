@@ -5,7 +5,8 @@ import questboard
 
 
 class User:
-    def __init__(self, name: str, level: int, experience: int, bookshop: object, adopted_cats: list, money: int, distributor: object, customers: list, quest_board: object):
+    def __init__(self, name: str, level: int, experience: int, bookshop: object, adopted_cats: list, money: int,
+                 distributor: object, customers: list, quest_board: object):
         self._name = name
         self._level = level
         self._experience = experience
